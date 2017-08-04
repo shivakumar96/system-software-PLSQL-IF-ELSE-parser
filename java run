@@ -1,0 +1,30 @@
+gcc -I"/usr/lib/jvm/java-8-openjdk-amd64/include" -I"/usr/lib/jvm/java-8-openjdk-amd64/include/linux" -o JNIDemo.so -shared -Wl,-soname,hello.so JNIDemo.c -static -lc
+
+
+gcc -fPIC -shared
+   -I/usr/lib/jvm/java-8-openjdk-amd64/include
+   -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux
+   -I/home/user1/JNI_project/
+   -o /home/user1/JNI_project/mynativelib.so
+   /home/user1/JNI_project/JNIDemo.c
+
+
+
+worked
+gcc -fPIC -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux -o JNIDemolib.so JNIDemo.c
+
+
+
+run
+java -Djava.library.path=. JNIDemo  
+
+
+
+//our command
+javac SS_GUI_1.java
+javah C_Caller
+gcc -fPIC -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux -o JNIC_caller.so C_Caller.c
+java -Djava.library.path=. SS_GUI_1
+
+
+
