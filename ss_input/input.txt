@@ -1,0 +1,13 @@
+
+BEGIN
+  IF ( a = b ) THEN 
+     dbms_output.put_line('Value of a is 20' ); 
+  ELSEIF ( a NOT b0 ) THEN 
+     dbms_output.put_line('Value of a is 20' ); 
+  ELSEIF ( TRUE ) THEN 
+     dbms_output.put_line('Value of a is 20' );
+  ELSE 
+     b := 2 ; 
+     c := 3 ;
+  END IF ;
+END

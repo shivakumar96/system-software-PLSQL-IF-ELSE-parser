@@ -1,0 +1,28 @@
+DECLARE 
+   a number(3) := 100; 
+   b integer := 20; 
+   c integer ;
+   b1 BOOLEAN := TRUE;
+   b2 BOOLEAN := FALSE;
+   str1 VARCHAR2 (10) := 'Logic';
+   str2 VARCHAR2 (10) := 'Logic';
+BEGIN
+  IF ( 2 = 3 ) THEN 
+     dbms_output.put_line('Value of a is 20' );
+
+  ELSIF ( str1 IN str2 ) THEN 
+     dbms_output.put_line('Value of a is 20' ); 
+
+  ELSIF ( a ~= b ) THEN 
+     dbms_output.put_line('Value of a is 20' ); 
+     dbms_output.put_line('Value of a is 20' );  
+
+  ELSIF ( a > 3 ) THEN : 
+     c := 10 ;
+     dbms_output.put_line('Value of a is 20' ); 
+
+  ELSE 
+     b := 2 ; 
+     c := 3 ;
+  END IF ;
+END
